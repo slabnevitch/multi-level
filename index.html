@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/component.css">
+	
+	<link rel="stylesheet" href="css/default.css">
+	<link rel="stylesheet" href="css/media.css">
+	<style>
+		.dl-trigger{
+			display: block;
+			font-size: 50px;
+		}
+		.dl-trigger:hover{
+			color: gray;
+		}
+		.dl-menuwrapper ul{
+			/*стилизация фона выпадающего меню*/
+			background-color: orange; 
+		}
+		.dl-back{
+			/*стилизация надписи "Back"*/
+			background-color: #000;
+		}
+		.dl-menuwrapper li.dl-back::after{
+			/*стилизация треугольника "Назад" надписи "Back"*/
+			/*один ир тот же символ, т.к. треугольник здесь перевернут*/
+			content: '\f0da';
+			font-family: FontAwesome;
+		}
+		.dl-menuwrapper li > a:not(:only-child)::after{
+			/*стилизация треугольника-указателя на вложенное меню*/
+			content: '\f0da';
+			font-family: FontAwesome;
+		}
+	
+
+	</style>
+</head>
+<body>
+
+	<div id="dl-menu" class="dl-menuwrapper">
+		<a href="" class="dl-trigger">Open menu</a>
+		<!-- <a href="#" class="toggle-mnu hidden-lg"><span></span></a> -->
+		<ul class="dl-menu">
+			<li>
+				<a href="#">item1</a>
+				<ul class="dl-submenu">
+					<li><a href="">sub-item1</a></li>
+					<li><a href="">sub-item2</a></li>
+					
+					<li>
+						<a href="">sub-item4</a>
+							<ul class="dl-submenu">
+								<li><a href="">sub-sub-item1</a></li>
+								<li><a href="">sub-sub-item2</a></li>
+								<li><a href="">sub-sub-item3</a></li>
+								<li><a href="">sub-sub-item4</a></li>
+							</ul>
+
+						</li>
+				</ul>
+			</li>
+			<li><a href="#">item2</a></li>
+			<li><a href="#">item3</a></li>
+			<li><a href="#">item4</a></li>
+		</ul>
+
+	</div>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="js/modernizr.custom.js"></script>
+	<script src="js/jquery.dlmenu.js"></script>
+	<script>
+		$(function() {
+				$( '#dl-menu' ).dlmenu({
+					animationClasses : { classin : 'dl-animate-in-5', classout : 'dl-animate-out-5' }
+				});
+			});
+	</script>
+</body>
+</html>
+
