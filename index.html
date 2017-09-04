@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/component.css">
+	<link rel="stylesheet" href="css/component.css">
+	<link rel="stylesheet" href="css/default.css">
+	<style>
+		.dl-trigger{
+			font-size: 50px;
+		}
+	</style>
+</head>
+<body>
+
+	<div id="dl-menu" class="dl-menuwrapper">
+		<a href="" class="dl-trigger">Open menu</a>
+		<!-- <a href="#" class="toggle-mnu hidden-lg"><span></span></a> -->
+		<ul class="dl-menu">
+			<li>
+				<a href="#">item1</a>
+				<ul class="dl-submenu">
+					<li><a href="">sub-item1</a></li>
+					<li><a href="">sub-item2</a></li>
+					<li><a href="">sub-item3</a></li>
+					<li>
+						<a href="">sub-item4</a>
+							<ul class="dl-submenu">
+								<li><a href="">sub-sub-item1</a></li>
+								<li><a href="">sub-sub-item2</a></li>
+								<li><a href="">sub-sub-item3</a></li>
+								<li><a href="">sub-sub-item4</a></li>
+							</ul>
+
+						</li>
+				</ul>
+			</li>
+			<li><a href="#">item2</a></li>
+			<li><a href="#">item3</a></li>
+			<li><a href="#">item4</a></li>
+		</ul>
+
+	</div>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="js/modernizr.custom.js"></script>
+	<script src="js/jquery.dlmenu.js"></script>
+	<script>
+		$( '#dl-menu' ).dlmenu({
+				animationClasses : { classin : 'dl-animate-in-1', classout : 'dl-animate-out-1'}
+		});
+	</script>
+</body>
+</html>
+
