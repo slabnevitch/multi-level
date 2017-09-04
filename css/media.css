@@ -1,0 +1,19 @@
+	@media only screen and (min-width: 768px){
+			.dl-menuwrapper{
+				max-width: none;
+			}
+			.dl-menuwrapper .dl-menu{
+				opacity: 1;
+				display: -webkit-flex;
+				display: -moz-flex;
+				display: -ms-flex;
+				display: -o-flex;
+				display: flex;
+
+				justify-content: space-between;
+			}
+			.dl-menu li{
+			display: inline-block;
+			list-style-type: none;
+		}
+	}
